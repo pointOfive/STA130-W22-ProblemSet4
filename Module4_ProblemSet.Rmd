@@ -33,7 +33,7 @@ Approximately 22% of the general population use the social media platform Twitte
 (a) What are appropriate null and alternative hypotheses to test the claim? Make sure you define the parameter in context.
 
 
-(b) Use the `sample()` function to simulate the number of students who use Twitter in a random sample of 400 DoSS students, under the assumption that the prevalence of Twitter usage is the same among DoSS students as it is in the general population. How many Twitter users did you have in your simulated sample of 400 students? How does this simulated count compare to the results of the Twitter study (i.e., that 103 of the 400 students sampled use Twitter in the sample of real DOSS students)? How does it compare to the assumption that 22% of students use Twitter. 
+(b) Use the `sample()` function to simulate the number of students who use Twitter in a random sample of 400 DoSS students, under the assumption that the prevalence of Twitter usage is the same among DoSS students as it is in the general population. How many Twitter users did you have in your simulated sample of 400 students?  Visualize the number of Twitter users versus non-Twitter users with a bar plot.  How does this simulated proportion compare to the results of the Twitter study (i.e., that 103 of the 400 students sampled use Twitter in the sample of real DOSS students)? How does it compare to the assumption that 22% of students use Twitter. 
 
     Note: the probabilities assigned to the values in the vector from which you're sampling using the `sample()` function are considered equal by default. For example, consider simulating flipping a fair coin 10 times:
 
@@ -55,6 +55,12 @@ sample(c("Head","Tail"), size=10, prob=c(0.1, 0.9), replace=TRUE)
  
 ```{r}
 
+
+```
+
+```{r}
+ggplot(data=NULL, aes(x=c("Twitterer","Non_Twitterer"), y=c(103,400-103))) + 
+  geom_col() + lims(y=c(0,n))
 ```
 
  
@@ -192,7 +198,7 @@ You may enjoy [*this article*](https://rss.onlinelibrary.wiley.com/doi/full/10.1
 \newpage
 # Part 2
 
-Your peers just finished participating in a new version of the British Tea experiment and had so much fun that they want you to come up with an entirely new experiment (except one that does NOT involve drinking tea any more)! Help your peers come up with a hypothesis that you could test using a simulation test. You should do the following:  
+Your friends just finished participating in a new version of the British Tea experiment and had so much fun that they want you to come up with an entirely new experiment (except one that does NOT involve drinking tea any more)! If you don't know what they're talking about, check out the  *Optional Question 3* from *Part 1* -- just reviewing the prompt will be enough to get you "in the know" about what your friends are going on about. Then, help your friends come up with a hypothesis that you could test using a simulation test! You should do the following:  
 
 - Write the hypothesis out in plain words, 
 - Write the hypothesis using appropriate scientific/mathematical notation (e.g. Ho = 0), 

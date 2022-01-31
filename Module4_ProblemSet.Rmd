@@ -60,7 +60,7 @@ sample(c("Head","Tail"), size=10, prob=c(0.1, 0.9), replace=TRUE)
 
 ```{r}
 ggplot(data=NULL, aes(x=c("Twitterer","Non_Twitterer"), y=c(103,400-103))) + 
-  geom_col() + lims(y=c(0,n))
+  geom_col() + lims(y=c(0,400))
 ```
 
  
